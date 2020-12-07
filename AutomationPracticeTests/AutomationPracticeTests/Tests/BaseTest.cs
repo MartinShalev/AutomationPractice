@@ -10,8 +10,8 @@ namespace AutomationPracticeTests
 {
     public class BaseTest
     {
-        public WebDriver Driver { get;  set; }
-        public Actions Builder { get;  set; }
+        protected WebDriver Driver { get;  set; }
+        protected Actions Builder { get;  set; }
 
         public void Initialize()
         {
