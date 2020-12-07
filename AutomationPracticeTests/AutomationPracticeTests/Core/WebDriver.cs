@@ -89,6 +89,11 @@ namespace SeleniumTests.Core
             WrappedDriver.ToString();
         }
 
+        public string GetUral()
+        {
+            return this.WrappedDriver.Url;
+        }
+
         public WebElement FindElement(By locator)
         {
             IWebElement nativeWebElement = _webDriverWait.Until(d => d.FindElement(locator));

@@ -79,6 +79,8 @@ namespace SeleniumTests.Core
             return WrappedElement?.GetProperty(property);
         }
 
+
+
         public void ConvertToString()
         {
             WrappedElement?.ToString();
