@@ -1,6 +1,9 @@
 ﻿using AutomationPracticeTests.Sections;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
+using System;
+using System.Linq;
+using System.Threading;
 
 namespace AutomationPracticeTests.Tests.FooterTest
 {
@@ -61,6 +64,55 @@ namespace AutomationPracticeTests.Tests.FooterTest
 
             Assert.IsTrue(Driver.Url().Contains("authentication&back"));
         }
+        [Test]
+        public void ClikFacebookLinkButton()
+        {
+            _footterSection.FacebookLinkButton.Click();
+
+            Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
+
+            var currentUrl = Driver.Url().ToString();
+
+            Assert.IsTrue(currentUrl.Contains("www.facebook.com"));
+        }
+
+        [Test]
+        public void ClikTwitterLinkButton()
+        {
+            _footterSection.TwitterLinkButton.Click();
+
+            Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
+
+            var currentUrl = Driver.Url().ToString();
+
+            Assert.IsTrue(currentUrl.Contains("twitter.com"));
+        }
+
+        [Test]
+        public void ClikYoutubeLinkButton()
+        {
+            _footterSection.YoutubeLinkButton.Click();
+
+            Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
+
+            var currentUrl = Driver.Url().ToString();
+
+            Assert.IsTrue(currentUrl.Contains("www.youtube.com"));
+        }
+
+        [Test]
+        public void ClikGooglePlusLinkButton()
+        {
+            _footterSection.GooglePlusLinkButton.Click();
+
+            Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
+
+            var currentUrl = Driver.Url().ToString();
+
+            Assert.IsTrue(currentUrl.Contains("plus.google.com"));
+        }
+
+        //public void 
 
     }
 }
