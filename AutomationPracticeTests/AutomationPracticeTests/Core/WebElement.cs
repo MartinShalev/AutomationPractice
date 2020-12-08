@@ -26,10 +26,16 @@ namespace SeleniumTests.Core
             By = by;
         }
 
-        public void SendKeys(string text)
+        public WebElement SendKeys(string text)
         {
             Debug.WriteLine($"Text {text} is written in element with locator {By}");
             WrappedElement.SendKeys(text);
+            return this;
+        }
+
+        public void Submit()
+        {
+            WrappedElement.Submit();
         }
 
         public void Clear()

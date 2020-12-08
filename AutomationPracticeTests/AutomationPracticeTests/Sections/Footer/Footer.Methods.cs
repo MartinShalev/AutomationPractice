@@ -1,6 +1,7 @@
-﻿using AutomationPracticeTests.Pages;
-using OpenQA.Selenium;
+﻿using AutoFixture;
+using AutomationPracticeTests.Pages;
 using SeleniumTests.Core;
+using System;
 
 namespace AutomationPracticeTests.Sections
 {
@@ -13,5 +14,11 @@ namespace AutomationPracticeTests.Sections
 
         public string URL { get { return "http://automationpractice.com/index.php"; } }
 
+        public string CreateRandomEmail()
+        {
+            var fixture = new Fixture();
+            var email = fixture.Create<String>();
+            return $"{email}@gmail.com";
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace AutomationPracticeTests
         public void Initialize()
         {
             Driver = new WebDriver();
-            Driver.StartHeadless(Browser.Chrome);
+            Driver.Start(Browser.Chrome);
             Builder = new Actions(Driver.WrappedDriver);
             Driver.WrappedDriver.Manage().Window.Maximize();
         }

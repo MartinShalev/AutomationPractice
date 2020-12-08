@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumTests.Core;
+
 public static class DriverExtensions
 {
     public static void ScrollUp(this WebDriver driver, int pixels)

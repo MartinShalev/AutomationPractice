@@ -111,8 +111,16 @@ namespace AutomationPracticeTests.Tests.FooterTest
 
             Assert.IsTrue(currentUrl.Contains("plus.google.com"));
         }
+        [Test]
+        public void NewsLetterFieldWithCorrectNweEmail()
+        {
+            var email = _footterSection.CreateRandomEmail();
 
-        //public void 
+            Driver.ScrollToElement(_footterSection.NewsLetterField)
+                .SendKeys(email);
+            _footterSection.NewsLetterSubmitButton.Submit();
 
+            Assert.AreEqual(_footterSection.Message.Text, "Newsletter : You have successfully subscribed to this newsletter.");
+        }
     }
 }
