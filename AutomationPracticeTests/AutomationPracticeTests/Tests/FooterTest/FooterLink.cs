@@ -1,9 +1,7 @@
 ﻿using AutomationPracticeTests.Sections;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
-using System;
 using System.Linq;
-using System.Threading;
 
 namespace AutomationPracticeTests.Tests.FooterTest
 {
@@ -120,7 +118,44 @@ namespace AutomationPracticeTests.Tests.FooterTest
                 .SendKeys(email);
             _footterSection.NewsLetterSubmitButton.Submit();
 
-            Assert.AreEqual(_footterSection.Message.Text, "Newsletter : You have successfully subscribed to this newsletter.");
+            Assert.AreEqual(_footterSection.SuccessMessage.Text, "Newsletter : You have successfully subscribed to this newsletter.");
+        }
+
+        [Test]
+        public void NewsLetterFieldWithCorrectExistingEmail()
+        {
+            var email = "testemail@test.com";
+
+            Driver.ScrollToElement(_footterSection.NewsLetterField)
+                .SendKeys(email);
+            _footterSection.NewsLetterSubmitButton.Submit();
+
+            Assert.AreEqual(_footterSection.ErrorMessage.Text, "Newsletter : This email address is already registered.");
+        }
+
+        [Test]
+        public void NewsLetterFieldWithIncorrectEmail()
+        {
+            var email = "testemailtest.com";
+
+            Driver.ScrollToElement(_footterSection.NewsLetterField)
+                .SendKeys(email);
+            _footterSection.NewsLetterSubmitButton.Submit();
+
+            Assert.AreEqual(_footterSection.ErrorMessage.Text, "Newsletter : Invalid email address.");
+        }
+
+        [Test]
+        public void CheckCreatorsLink()
+        {
+            Driver.ScrollToElement(_footterSection.CreatorsLink).Click();
+
+            Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
+
+            var currentUrl = Driver.Url().ToString();
+
+            Assert.IsTrue(currentUrl.Contains("prestashop.com"));
+
         }
     }
 }
