@@ -58,8 +58,6 @@ namespace AutomationPracticeTests.Tests.FooterTest
 
             _footterSection.FooterLinks(linkText).Click();
 
-            var test = Driver.Url().ToString();
-
             Assert.IsTrue(Driver.Url().Contains("authentication&back"));
         }
         [Test]
