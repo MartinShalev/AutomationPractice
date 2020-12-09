@@ -92,7 +92,14 @@ namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
 
             Assert.IsTrue(_footerSection.CreatorsLink.Displayed);
         }
+        
+        [Test]
+        public void PresenceOfInformationSection()
+        {
+            Driver.ScrollToElement(_footerSection.InformationSection);
 
+            Assert.IsTrue(_footerSection.InformationSection.Displayed);
+        }
 
 
     }

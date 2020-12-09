@@ -27,5 +27,7 @@ namespace AutomationPracticeTests.Sections
         public WebElement ErrorMessage => Driver.FindElement(By.XPath("//div[@id='columns']//p[contains(@class, 'alert-danger')]"));
         public WebElement NewsLetterSubmitButton => Driver.FindElement(By.XPath("//div[@class='form-group']//button"));
         public WebElement CreatorsLink => Driver.FindElement(By.XPath("//section[contains(@class, 'bottom-footer')]//a"));
+        public WebElement InformationSection => Driver.FindElement(By.Id("block_contact_infos"));   
     }
+
 }
