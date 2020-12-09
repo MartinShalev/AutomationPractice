@@ -77,6 +77,14 @@ namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
 
             Assert.IsTrue(_footerSection.NewsLetterEmailInputElement.Displayed);
         }
+        [Test]
+        public void PresenceOfNewsletterSubmitButton()
+        {
+            Driver.ScrollToElement(_footerSection.NewsLetterSubmitButton);
+
+            Assert.IsTrue(_footerSection.NewsLetterSubmitButton.Displayed);
+        }
+
 
 
     }
