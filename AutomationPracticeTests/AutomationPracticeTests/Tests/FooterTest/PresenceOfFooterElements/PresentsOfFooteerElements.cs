@@ -85,6 +85,14 @@ namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
             Assert.IsTrue(_footerSection.NewsLetterSubmitButton.Displayed);
         }
 
+        [Test]
+        public void PresenceOfCreatorsLink()
+        {
+            Driver.ScrollToElement(_footerSection.CreatorsLink);
+
+            Assert.IsTrue(_footerSection.CreatorsLink.Displayed);
+        }
+
 
 
     }
