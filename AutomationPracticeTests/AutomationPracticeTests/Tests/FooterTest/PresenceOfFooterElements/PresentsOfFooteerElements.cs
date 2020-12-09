@@ -70,5 +70,14 @@ namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
             Assert.IsTrue(_footerSection.NewsletterTextElement.Displayed);
         }
 
+        [Test]
+        public void PreseceOfNewsletterEmailInputField()
+        {
+            Driver.ScrollToElement(_footerSection.NewsLetterEmailInputElement);
+
+            Assert.IsTrue(_footerSection.NewsLetterEmailInputElement.Displayed);
+        }
+
+
     }
 }
