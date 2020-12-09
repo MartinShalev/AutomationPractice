@@ -60,53 +60,23 @@ namespace AutomationPracticeTests.Tests.FooterTest
 
             Assert.IsTrue(Driver.Url().Contains("authentication&back"));
         }
-        [Test]
-        public void ClikFacebookLinkButton()
+        [Test]       
+        [TestCase("facebook")]
+        [TestCase("twitter")]
+        [TestCase("youtube")]
+        [TestCase("google")]
+        public void ClikSocialMediaLinkImage(string mediaName)
         {
-            _footterSection.FacebookLinkButton.Click();
+            _footterSection.SocialMediaLinksImages(mediaName).Click();
 
             Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
 
             var currentUrl = Driver.Url().ToString();
 
-            Assert.IsTrue(currentUrl.Contains("www.facebook.com"));
+            Assert.IsTrue(currentUrl.Contains(mediaName));
         }
 
-        [Test]
-        public void ClikTwitterLinkButton()
-        {
-            _footterSection.TwitterLinkButton.Click();
-
-            Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
-
-            var currentUrl = Driver.Url().ToString();
-
-            Assert.IsTrue(currentUrl.Contains("twitter.com"));
-        }
-
-        [Test]
-        public void ClikYoutubeLinkButton()
-        {
-            _footterSection.YoutubeLinkButton.Click();
-
-            Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
-
-            var currentUrl = Driver.Url().ToString();
-
-            Assert.IsTrue(currentUrl.Contains("www.youtube.com"));
-        }
-
-        [Test]
-        public void ClikGooglePlusLinkButton()
-        {
-            _footterSection.GooglePlusLinkButton.Click();
-
-            Driver.WrappedDriver.SwitchTo().Window(Driver.WrappedDriver.WindowHandles.Last());
-
-            var currentUrl = Driver.Url().ToString();
-
-            Assert.IsTrue(currentUrl.Contains("plus.google.com"));
-        }
+        
         [Test]
         public void NewsLetterFieldWithCorrectNweEmail()
         {
