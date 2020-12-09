@@ -6,12 +6,17 @@ namespace AutomationPracticeTests.Sections
 {
     public partial class Footer
     {
-        public WebElement FooterLinks(string lincText)
+        public WebElement FooterLinks(string linkText)
         {
-            return Driver.FindElement(By.XPath($"//div[@class='footer-container']//a[normalize-space(.) = '{lincText}']"));
+            return Driver.FindElement(By.XPath($"//div[@class='footer-container']//a[normalize-space(.) = '{linkText}']"));
 
         }
+        public WebElement SocialMediaLinksImages(string mediaName)
+        {
 
+            return Driver.FindElement(By.XPath($"//a[contains(@href, '{mediaName}')]"));
+
+        }
         public WebElement FacebookLinkButton => Driver.FindElement(By.XPath("//a[contains(@href, 'facebook')]"));
         public WebElement TwitterLinkButton => Driver.FindElement(By.XPath("//a[contains(@href, 'twitter')]"));
         public WebElement YoutubeLinkButton => Driver.FindElement(By.XPath("//a[contains(@href, 'youtube')]"));

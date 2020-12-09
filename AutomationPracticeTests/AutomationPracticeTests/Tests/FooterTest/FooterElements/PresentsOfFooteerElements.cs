@@ -51,9 +51,15 @@ namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
         }
 
         [Test]
-        public void PresenceOfFooterSocialMediaImages()
+        [TestCase("facebook")]
+        [TestCase("twitter")]
+        [TestCase("youtube")]
+        [TestCase("google")]
+        public void PresenceOfFooterSocialMediaImages(string mediaName)
         {
+            Driver.ScrollToElement(_footerSection.SocialMediaLinksImages(mediaName));
 
+            Assert.IsTrue(_footerSection.SocialMediaLinksImages(mediaName).Displayed);
         }
     }
 }
