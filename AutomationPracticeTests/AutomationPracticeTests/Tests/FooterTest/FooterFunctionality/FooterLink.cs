@@ -82,7 +82,7 @@ namespace AutomationPracticeTests.Tests.FooterTest
         {
             var email = _footterSection.CreateRandomEmail();
 
-            Driver.ScrollToElement(_footterSection.NewsLetterField)
+            Driver.ScrollToElement(_footterSection.NewsLetterEmailInputElement)
                 .SendKeys(email);
             _footterSection.NewsLetterSubmitButton.Submit();
 
@@ -94,7 +94,7 @@ namespace AutomationPracticeTests.Tests.FooterTest
         {
             var email = "testemail@test.com";
 
-            Driver.ScrollToElement(_footterSection.NewsLetterField)
+            Driver.ScrollToElement(_footterSection.NewsLetterEmailInputElement)
                 .SendKeys(email);
             _footterSection.NewsLetterSubmitButton.Submit();
 
@@ -106,7 +106,7 @@ namespace AutomationPracticeTests.Tests.FooterTest
         {
             var email = "testemailtest.com";
 
-            Driver.ScrollToElement(_footterSection.NewsLetterField)
+            Driver.ScrollToElement(_footterSection.NewsLetterEmailInputElement)
                 .SendKeys(email);
             _footterSection.NewsLetterSubmitButton.Submit();
 

@@ -17,11 +17,12 @@ namespace AutomationPracticeTests.Sections
             return Driver.FindElement(By.XPath($"//a[contains(@href, '{mediaName}')]"));
 
         }
+        public WebElement NewsletterTextElement => Driver.FindElement(By.XPath("//div[@id='newsletter_block_left']//h4"));
         public WebElement FacebookLinkButton => Driver.FindElement(By.XPath("//a[contains(@href, 'facebook')]"));
         public WebElement TwitterLinkButton => Driver.FindElement(By.XPath("//a[contains(@href, 'twitter')]"));
         public WebElement YoutubeLinkButton => Driver.FindElement(By.XPath("//a[contains(@href, 'youtube')]"));
         public WebElement GooglePlusLinkButton => Driver.FindElement(By.XPath("//a[contains(@href, 'google')]"));
-        public WebElement NewsLetterField => Driver.FindElement(By.Id("newsletter-input"));
+        public WebElement NewsLetterEmailInputElement => Driver.FindElement(By.Id("newsletter-input"));
         public WebElement SuccessMessage => Driver.FindElement(By.XPath("//div[@id='columns']//p[contains(@class, 'alert-success')]"));
         public WebElement ErrorMessage => Driver.FindElement(By.XPath("//div[@id='columns']//p[contains(@class, 'alert-danger')]"));
         public WebElement NewsLetterSubmitButton => Driver.FindElement(By.XPath("//div[@class='form-group']//button"));

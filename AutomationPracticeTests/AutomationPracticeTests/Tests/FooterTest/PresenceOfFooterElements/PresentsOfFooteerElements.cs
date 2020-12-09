@@ -61,5 +61,14 @@ namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
 
             Assert.IsTrue(_footerSection.SocialMediaLinksImages(mediaName).Displayed);
         }
+
+        [Test]
+        public void PreseceOfNewsletterTextElement()
+        {
+            Driver.ScrollToElement(_footerSection.NewsletterTextElement);
+
+            Assert.IsTrue(_footerSection.NewsletterTextElement.Displayed);
+        }
+
     }
 }
