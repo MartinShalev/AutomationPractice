@@ -63,6 +63,17 @@ namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
         }
 
         [Test]
+        [TestCase("icon-map-marker")]
+        [TestCase("icon-phone")]
+        [TestCase("icon-envelope-alt")]
+        public void PreseceOfInformationSectionIcons(string iconName)
+        {
+            Driver.ScrollToElement(_footerSection.InformationSectionIconMarkers(iconName));
+
+            Assert.IsTrue(_footerSection.InformationSectionIconMarkers(iconName).Displayed);
+        }
+
+        [Test]
         public void PreseceOfNewsletterTextElement()
         {
             Driver.ScrollToElement(_footerSection.NewsletterTextElement);
