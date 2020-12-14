@@ -5,13 +5,13 @@ using System.Text;
 
 namespace AutomationPracticeTests.Pages.LogIn
 {
-    class LogInPage : BasePage
+    class SingInPage : BasePage
     {
-        public LogInPage(WebDriver driver) 
+        public SingInPage(WebDriver driver) 
             : base(driver)
         {
         }
 
-        public string URL { get { return ""; } }
+        public string URL { get { return "http://automationpractice.com/index.php?controller=authentication&back=my-account"; } }
     }
 }
