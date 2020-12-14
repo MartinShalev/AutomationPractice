@@ -1,5 +1,4 @@
-﻿using AutomationPracticeTests.Pages;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using SeleniumTests.Core;
 
 namespace AutomationPracticeTests.Sections
