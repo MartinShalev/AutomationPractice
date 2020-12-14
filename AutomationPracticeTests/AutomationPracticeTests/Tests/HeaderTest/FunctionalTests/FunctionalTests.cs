@@ -31,8 +31,8 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
             if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
                 TakeScreenshot(@"..\..\..\");
-                Driver.Quit();
             }
+            Driver.Quit();
         }
         [Test]
         public void RelocatedToContactUsPageWhenClickContactUsButton()
@@ -43,6 +43,16 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
             var currentUrl = Driver.Url();
 
             Assert.AreEqual(currentUrl, _contactUsPage.URL);
+        }
+
+        [Test]
+        public void SuccessRelocationWhenClickSingInButton()
+        {
+            _headerSection.SingInButton.Click();
+
+            var currentUrl = Driver.Url();
+
+            Assert.AreEqual(currentUrl, _singInPage.URL);
         }
     }
 }
