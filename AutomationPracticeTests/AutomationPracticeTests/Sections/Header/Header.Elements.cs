@@ -15,7 +15,7 @@ namespace AutomationPracticeTests.Sections.Header
         public WebElement SearchBoxSubmmitButton => Driver.FindElement(By.XPath("//button[@name='submit_search']"));
         public WebElement ShopingCart => Driver.FindElement(By.ClassName("shopping_cart"));
         public WebElement BlogTopMenuWomenButton => Driver.FindElement(By.XPath("//a[@title='Women']"));
-        public WebElement BlogTopMenuDressesButton => Driver.FindElement(By.XPath("//a[@title='Dresses']"));
-        public WebElement BlogTopMenuTshirtsButton => Driver.FindElement(By.XPath("//a[@title='T-shirts']"));
+        public WebElement BlogTopMenuDressesButton => Driver.FindElement(By.XPath("//*[@id='block_top_menu']/ul/li[2]/a"));
+        public WebElement BlogTopMenuTshirtsButton => Driver.FindElement(By.XPath("//div[@id='block_top_menu']/ul/li[3]"));
     }
 }

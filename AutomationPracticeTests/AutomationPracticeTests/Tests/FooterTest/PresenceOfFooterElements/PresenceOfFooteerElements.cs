@@ -8,7 +8,7 @@ using System.Text;
 namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
 {
     [TestFixture]
-    public class PresentsOfFooteerElements : BaseTest
+    public class PresenceOfFooteerElements : BaseTest
     {
         private Footer _footerSection;
 
@@ -43,7 +43,7 @@ namespace AutomationPracticeTests.Tests.FooterTest.FooterElements
         [TestCase("My credit slips")]
         [TestCase("My addresses")]
         [TestCase("My personal info")]
-        public void PresentsOfFooterLinkElements(string linkText)
+        public void PresenceOfFooterLinkElements(string linkText)
         {
             Driver.ScrollToElement(_footerSection.FooterLinks(linkText));
 
