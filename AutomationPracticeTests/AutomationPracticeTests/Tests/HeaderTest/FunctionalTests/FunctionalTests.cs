@@ -54,5 +54,17 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
 
             Assert.AreEqual(currentUrl, _singInPage.URL);
         }
+
+        [Test]
+        public void RelocatedToMainPageWhenLogoIsClicked()
+        {
+            _headerSection.SingInButton.Click();
+
+            Assert.AreEqual(Driver.Url(), _singInPage.URL);
+
+            _headerSection.CompanyLogo.Click();
+
+            Assert.AreEqual(Driver.Url(), _headerSection.URL);
+        }
     }
 }

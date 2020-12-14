@@ -14,4 +14,6 @@ namespace AutomationPracticeTests.Pages.LogIn
 
         public string URL { get { return "http://automationpractice.com/index.php?controller=authentication&back=my-account"; } }
     }
+
+
 }
