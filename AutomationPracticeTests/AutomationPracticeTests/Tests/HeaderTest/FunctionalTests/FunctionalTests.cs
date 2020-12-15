@@ -84,6 +84,12 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
             Assert.IsTrue(Driver.Url().Contains("http://automationpractice.com/index.php?id_category"));
         }
 
-        
+        [Test]
+        public void SuccessRelocationWhenClicTshirtCategoryButton()
+        {
+            _headerSection.BlogTopMenuTshirtsButton.Click();
+
+            Assert.IsTrue(Driver.Url().Contains("http://automationpractice.com/index.php?id_category"));
+        }
     }
 }
