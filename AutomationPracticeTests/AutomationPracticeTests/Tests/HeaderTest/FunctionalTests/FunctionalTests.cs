@@ -1,11 +1,9 @@
-﻿using AutomationPracticeTests.Pages.ContactUs;
+﻿using AutomationPracticeTests.Pages.CategoryPage;
+using AutomationPracticeTests.Pages.ContactUs;
 using AutomationPracticeTests.Pages.LogIn;
 using AutomationPracticeTests.Sections.Header;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
 {
@@ -15,6 +13,7 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
         private Header _headerSection;
         private SingInPage _singInPage;
         private ContactUsPage _contactUsPage;
+        private CategoryPage _categoyPage;
 
         [SetUp]
         public void SetUp()
@@ -23,6 +22,7 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
             _headerSection = new Header(Driver);
             _singInPage = new SingInPage(Driver);
             _contactUsPage = new ContactUsPage(Driver);
+            _categoyPage = new CategoryPage(Driver);
             Driver.GoToUrl(_headerSection.URL);
         }
         [TearDown]
@@ -35,7 +35,7 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
             Driver.Quit();
         }
         [Test]
-        public void RelocatedToContactUsPageWhenClickContactUsButton()
+        public void SuccessRelocationWhenClickContactUsButton()
         {
 
             _headerSection.ContactUsButton.Click();
@@ -65,6 +65,14 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
             _headerSection.CompanyLogo.Click();
 
             Assert.AreEqual(Driver.Url(), _headerSection.URL);
+        }
+
+        [Test]
+        public void SuccessRelocationWhenClickWomenCategoryButton()
+        {
+            _headerSection.BlogTopMenuWomenButton.Click();
+
+            Assert.AreEqual(Driver.Url(), _categoyPage.URL);
         }
     }
 }
