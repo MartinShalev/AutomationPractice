@@ -31,61 +31,61 @@ namespace AutomationPracticeTests.Tests.HeaderTest.PresenceOfHeaderElements
         }
 
         [Test]
-        public void PresencsOfBaberImg()
+        public void PresenceOfBaberImg()
         {
             Assert.IsTrue(_headerSection.Banner.Displayed);           
         }
 
         [Test]
-        public void PresencsOfNavCallElement()
+        public void PresenceOfNavCallElement()
         {
             Assert.IsTrue(_headerSection.NavCallUsElemet.Displayed);
         }
 
         [Test]
-        public void PresencsOfNavContactUsButton()
+        public void PresenceOfNavContactUsButton()
         {
             Assert.IsTrue(_headerSection.ContactUsButton.Displayed);
         }
 
         [Test]
-        public void PresencsOfNavSingInButton()
+        public void PresenceOfNavSingInButton()
         {
             Assert.IsTrue(_headerSection.SingInButton.Displayed);
         }
 
         [Test]
-        public void PresencsOfCompanyLogo()
+        public void PresenceOfCompanyLogo()
         {
             Assert.IsTrue(_headerSection.CompanyLogo.Displayed);
         }
 
         [Test]
-        public void PresencsOfSearchBox()
+        public void PresenceOfSearchBox()
         {
             Assert.IsTrue(_headerSection.SearchBox.Displayed);
         }
 
         [Test]
-        public void PresencsOfShopingCart()
+        public void PresenceOfShopingCart()
         {
             Assert.IsTrue(_headerSection.ShopingCart.Displayed);
         }
 
         [Test]
-        public void PresencsOfWomenMenuButton()
+        public void PresenceOfWomenMenuButton()
         {
             Assert.IsTrue(_headerSection.BlogTopMenuWomenButton.Displayed);
         }
 
         [Test]
-        public void PresencsOfDressMenuButton()
+        public void PresenceOfDressMenuButton()
         {
             Assert.IsTrue(_headerSection.BlogTopMenuDressesButton.Displayed);
         }
 
         [Test]
-        public void PresencsOfTshirtsMenuButton()
+        public void PresenceOfTshirtsMenuButton()
         {
             Assert.IsTrue(_headerSection.BlogTopMenuTshirtsButton.Displayed);
         }
@@ -98,7 +98,7 @@ namespace AutomationPracticeTests.Tests.HeaderTest.PresenceOfHeaderElements
         [TestCase("Casual Dresses")]
         [TestCase("Evening Dresses")]
         [TestCase("Summer Dresses")]
-        public void PreseceOfWomenCategorySubMenus(string subMenu)
+        public void PresenceOfWomenCategorySubMenus(string subMenu)
         {
            Builder.MoveToElement(_headerSection.BlogTopMenuWomenButton .WrappedElement).Perform();
 
@@ -109,7 +109,7 @@ namespace AutomationPracticeTests.Tests.HeaderTest.PresenceOfHeaderElements
         [TestCase("Casual Dresses")]
         [TestCase("Evening Dresses")]
         [TestCase("Summer Dresses")]
-        public void PreseceOfDressesCategorySubMenus(string subMenu)
+        public void PresenceOfDressesCategorySubMenus(string subMenu)
         {
             Builder.MoveToElement(_headerSection.BlogTopMenuDressesButton.WrappedElement).Perform();
 
