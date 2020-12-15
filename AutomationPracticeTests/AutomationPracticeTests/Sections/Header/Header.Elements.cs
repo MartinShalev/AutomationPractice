@@ -18,7 +18,7 @@ namespace AutomationPracticeTests.Sections.Header
         public WebElement BlogTopMenuWomenButton => Driver.FindElement(By.XPath("//a[@title='Women']"));
         public WebElement BlogTopMenuDressesButton => Driver.FindElement(By.XPath("//*[@id='block_top_menu']/ul/li[2]/a"));
         public WebElement BlogTopMenuTshirtsButton => Driver.FindElement(By.XPath("//div[@id='block_top_menu']/ul/li[3]"));
-        public WebElement BlogTopMenuWomenButtonSubMenus(string subMenu)
+        public WebElement BlogTopSubMenus(string subMenu)
         {
             return Driver.FindElement(By.XPath($"//li[@class='sfHover']//a[text() = '{subMenu}']"));
         }
