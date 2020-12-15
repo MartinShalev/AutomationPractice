@@ -4,6 +4,7 @@ using AutomationPracticeTests.Pages.LogIn;
 using AutomationPracticeTests.Sections.Header;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
+using System.Linq;
 
 namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
 {
@@ -74,5 +75,15 @@ namespace AutomationPracticeTests.Tests.HeaderTest.FunctionalTests
 
             Assert.AreEqual(Driver.Url(), _categoyPage.URL);
         }
+
+        [Test]
+        public void SuccessRelocationWhenClicDressesCategoryButton()
+        {
+            _headerSection.BlogTopMenuDressesButton.Click();
+
+            Assert.IsTrue(Driver.Url().Contains("http://automationpractice.com/index.php?id_category"));
+        }
+
+        
     }
 }
