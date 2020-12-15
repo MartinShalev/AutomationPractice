@@ -5,6 +5,7 @@ namespace AutomationPracticeTests.Sections.Header
 {
     public partial class Header 
     {
+    
         public WebElement Banner => Driver.FindElement(By.ClassName("banner"));
         public WebElement NavigationBar => Driver.FindElement(By.XPath("//div[@class='nav']"));
         public WebElement NavCallUsElemet => Driver.FindElement(By.XPath("//span[@class='shop-phone']"));
@@ -17,5 +18,9 @@ namespace AutomationPracticeTests.Sections.Header
         public WebElement BlogTopMenuWomenButton => Driver.FindElement(By.XPath("//a[@title='Women']"));
         public WebElement BlogTopMenuDressesButton => Driver.FindElement(By.XPath("//*[@id='block_top_menu']/ul/li[2]/a"));
         public WebElement BlogTopMenuTshirtsButton => Driver.FindElement(By.XPath("//div[@id='block_top_menu']/ul/li[3]"));
+        public WebElement BlogTopMenuWomenButtonSubMenus(string subMenu)
+        {
+            return Driver.FindElement(By.XPath($"//li[@class='sfHover']//a[text() = '{subMenu}']"));
+        }
     }
 }

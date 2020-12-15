@@ -1,7 +1,6 @@
-﻿using SeleniumTests.Core;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+
+using SeleniumTests.Core;
 
 namespace AutomationPracticeTests.Pages.ContactUs
 {

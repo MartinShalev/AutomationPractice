@@ -89,5 +89,22 @@ namespace AutomationPracticeTests.Tests.HeaderTest.PresenceOfHeaderElements
         {
             Assert.IsTrue(_headerSection.BlogTopMenuTshirtsButton.Displayed);
         }
+
+        [Test]
+        [TestCase("Tops")]
+        [TestCase("T-shirts")]
+        [TestCase("Blouses")]
+        [TestCase("Dresses")]
+        [TestCase("Casual Dresses")]
+        [TestCase("Evening Dresses")]
+        [TestCase("Summer Dresses")]
+        public void PreseceOfWomenCategorySubMenus(string subMenu)
+        {
+           Driver.HoverElement(_headerSection.BlogTopMenuWomenButtonSubMenus(subMenu));
+
+            Assert.IsTrue(_headerSection.BlogTopMenuWomenButtonSubMenus(subMenu).Displayed);
+        }
+
+
     }
 }
