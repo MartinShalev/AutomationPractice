@@ -100,7 +100,8 @@ namespace AutomationPracticeTests.Tests.HeaderTest.PresenceOfHeaderElements
         [TestCase("Summer Dresses")]
         public void PresenceOfWomenCategorySubMenus(string subMenu)
         {
-           Builder.MoveToElement(_headerSection.BlogTopMenuWomenButton .WrappedElement).Perform();
+           Builder.MoveToElement(_headerSection.BlogTopMenuWomenButton .WrappedElement).
+                Perform();
 
             Assert.IsTrue(_headerSection.BlogTopSubMenus(subMenu).Displayed);
         }
@@ -115,6 +116,7 @@ namespace AutomationPracticeTests.Tests.HeaderTest.PresenceOfHeaderElements
             Builder.MoveToElement(_headerSection.BlogTopMenuDressesButton.WrappedElement).Perform();
 
             Assert.IsTrue(_headerSection.BlogTopSubMenus(subMenu).Displayed);
+
         }
 
 
